@@ -5,9 +5,9 @@ public class Magazine extends WrittenMedia {
 	private int edition;
 	
 	//---[ Class Constructors ]---
-	public Magazine(int edition) {
-		super();
-		this.edition = edition;
+	public Magazine(String name) {
+		super(name);
+		this.edition = 0;
 	}
 	
 	public Magazine(String name, int edition) {
@@ -32,5 +32,10 @@ public class Magazine extends WrittenMedia {
 	
 	public int getEdition() {
 		return edition;
+	}
+	
+	@Override
+	public String toString() {
+		return name + " volume: " + edition + " | Published-by: " + publisher;
 	}
 }

@@ -10,6 +10,11 @@ public class Book extends WrittenMedia {
 		super();
 	}
 	
+	public Book(String name) {
+		super(name);
+		author = new Author();
+	}
+	
 	public Book(String name, Author author) {
 		super(name);
 		this.author = author;
@@ -59,5 +64,10 @@ public class Book extends WrittenMedia {
 	
 	public String getGenre() {
 		return genre;
+	}
+	
+	@Override
+	public String toString() {
+		return this.name + " by " + author.getName() + " | Published-by: " + publisher + " | Genre: " + genre;
 	}
 }

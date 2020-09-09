@@ -6,6 +6,10 @@ public class Video extends DigitalMedia implements utils.listenable{
 	private String audio, description;
 	
 	//---[ Constructors ]---
+	public Video(String name) {
+		super(name);
+	}
+	
 	public Video(String name, double runtime) {
 		super(name);
 		this.runtime = runtime;
@@ -56,5 +60,10 @@ public class Video extends DigitalMedia implements utils.listenable{
 			System.out.println("WARNING: Incorrect Access Level");
 		}
 		
+	}
+	
+	@Override
+	public String toString() {
+		return this.name + " | Description: " + description + " | Runtime: " + runtime;
 	}
 }
